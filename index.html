@@ -38,8 +38,14 @@
         </div>
     </header>
 
-    <!-- Hero Section -->
-    <section class="pt-32 pb-20 md:pt-48 md:pb-32 relative overflow-hidden bg-gradient-to-b from-slate-900 to-slate-950 border-b border-slate-900">
+    <!-- Hero Section cu Imagine de Fundal Tematică -->
+    <section class="pt-40 pb-28 md:pt-52 md:pb-36 relative overflow-hidden bg-slate-950 border-b border-slate-900">
+        <!-- Imagine de fundal cu efect de întunecare (overlay) -->
+        <div class="absolute inset-0 z-0 opacity-20">
+            <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2000&auto=format&fit=crop" alt="Business district background" class="w-full h-full object-cover">
+        </div>
+        <div class="absolute inset-0 bg-gradient-to-b from-slate-950/60 via-slate-950/90 to-slate-950 z-0"></div>
+
         <div class="max-w-7xl mx-auto px-6 text-center relative z-10">
             <span class="inline-block py-1 px-4 rounded-full bg-gold-500/10 text-gold-500 text-xs font-semibold tracking-widest uppercase mb-6 border border-gold-500/20">
                 Private Equity & Venture Capital • Ruse, Bulgaria[cite: 7]
@@ -54,14 +60,14 @@
                 <a href="#criterii" class="bg-gold-500 hover:bg-gold-600 text-slate-950 px-8 py-4 rounded-xl font-bold transition flex items-center justify-center space-x-2">
                     <span>Criterii de Achiziție</span>
                 </a>
-                <a href="#despre" class="bg-slate-900 hover:bg-slate-800 border border-slate-800 text-white px-8 py-4 rounded-xl font-bold transition">
+                <a href="#despre" class="bg-slate-900/80 hover:bg-slate-800 border border-slate-800 text-white px-8 py-4 rounded-xl font-bold transition">
                     Află Mai Multe
                 </a>
             </div>
         </div>
     </section>
 
-    <!-- Despre Noi -->
+    <!-- Despre Noi cu Imagine Laterală (Financial Strategy / Meeting) -->
     <section id="despre" class="py-24 bg-slate-950">
         <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             <div>
@@ -70,17 +76,17 @@
                     <strong>TRK Business Invest LTD</strong> este o societate de investiții și administrare a activelor cu sediul în Bulgaria, specializată în achiziția strategică de acțiuni și participații de capital în companii cu potențial ridicat de performanță[cite: 7].
                 </p>
                 <p class="text-slate-300 leading-relaxed mb-6">
-                    Operând dintr-unul dintre cele mai avantajoase și dinamice medii fiscale din Uniunea Europeană, ne propunem să creăm valoare sustenabilă prin optimizarea structurilor de capital și management strategic[cite: 7].
+                    Operând dintr-unul dintre cele mai avantajoase și dinamice medii fiscale din Uniunea Europeană[cite: 7], ne propunem să creăm valoare sustenabilă pe termen lung prin optimizarea structurilor de capital și management strategic riguros[cite: 7].
                 </p>
             </div>
-            <div class="bg-slate-900/50 border border-slate-800 p-8 rounded-2xl relative">
-                <div class="absolute -top-4 -right-4 bg-gold-500 text-slate-950 font-bold px-4 py-1.5 rounded-full text-xs shadow">
+            <div class="relative">
+                <div class="absolute -top-4 -right-4 bg-gold-500 text-slate-950 font-bold px-4 py-1.5 rounded-full text-xs shadow z-10">
                     Expertiză McKinsey[cite: 7]
                 </div>
-                <h3 class="text-xl font-semibold mb-4 text-white">Conducere și Viziune</h3>
-                <p class="text-slate-400 text-sm leading-relaxed mb-6">
-                    Fondată de <strong>Tirca Alexandru</strong>, compania sprijină activ entități juridice solide spre excelență operațională și expansiune regională[cite: 7].
-                </p>
+                <!-- Imagine reprezentativă pentru mediul de afaceri / investiții -->
+                <div class="rounded-2xl overflow-hidden border border-slate-800 shadow-2xl">
+                    <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=1000&auto=format&fit=crop" alt="Business strategy meeting" class="w-full h-[350px] object-cover hover:scale-105 transition duration-500">
+                </div>
             </div>
         </div>
     </section>
@@ -97,7 +103,7 @@
             <div class="bg-slate-950 p-8 rounded-2xl border border-slate-800">
                 <h3 class="text-2xl font-bold mb-4 text-white">Misiunea Noastră</h3>
                 <p class="text-slate-300 leading-relaxed">
-                    Să identificăm și să integrăm în portofoliul nostru companii solide, maximizând randamentul investițiilor pentru acționari prin decizii strategice bazate pe analiză amănunțită[cite: 7].
+                    Să identificăm și să integrăm în portofoliul nostru companii solide, maximizând randamentul investițiilor pentru acționari prin decizii strategice bazate pe analiză amănunțită și guvernanță corporativă strictă[cite: 7].
                 </p>
             </div>
         </div>
@@ -129,20 +135,29 @@
         </div>
     </section>
 
-    <!-- Criterii de Investiție -->
-    <section id="criterii" class="py-24 bg-slate-900/50 border-t border-slate-900">
-        <div class="max-w-5xl mx-auto px-6">
-            <div class="bg-slate-950 border border-slate-800 p-8 md:p-12 rounded-3xl">
+    <!-- Criterii de Investiție cu Banner Vizual -->
+    <section id="criterii" class="py-24 bg-slate-900/50 border-t border-slate-900 relative">
+        <div class="max-w-5xl mx-auto px-6 relative z-10">
+            <div class="bg-slate-950 border border-slate-800 p-8 md:p-12 rounded-3xl shadow-2xl">
                 <h2 class="text-3xl font-bold mb-6 text-white">Criterii de Achiziție & Investiții</h2>
                 <ul class="space-y-4 mb-10 text-slate-300">
-                    <li>• **Companii scalabile:** Modele de afaceri cu avantaje competitive clare și fluxuri de numerar predictibile[cite: 7].</li>
-                    <li>• **Echipe puternice:** Lideri dedicați excelenței operaționale și dezvoltării pe termen lung[cite: 7].</li>
-                    <li>• **Sectoare dinamice:** Tehnologie, servicii financiare, logistică și producție sustenabilă[cite: 7].</li>
+                    <li class="flex items-start space-x-3">
+                        <span class="text-gold-500 font-bold">•</span>
+                        <span><strong>Companii scalabile:</strong> Modele de afaceri cu avantaje competitive clare și fluxuri de numerar predictibile[cite: 7].</span>
+                    </li>
+                    <li class="flex items-start space-x-3">
+                        <span class="text-gold-500 font-bold">•</span>
+                        <span><strong>Echipe puternice:</strong> Lideri de management vizionari, dedicați excelenței operaționale[cite: 7].</span>
+                    </li>
+                    <li class="flex items-start space-x-3">
+                        <span class="text-gold-500 font-bold">•</span>
+                        <span><strong>Sectoare dinamice:</strong> Tehnologie, servicii financiare, logistică și producție sustenabilă[cite: 7].</span>
+                    </li>
                 </ul>
                 <div id="contact" class="border-t border-slate-900 pt-8 text-center">
                     <h3 class="text-xl font-bold mb-2 text-white">Doriți o colaborare sau o evaluare de oportunitate?</h3>
                     <p class="text-slate-400 text-sm mb-6">Sediul nostru principal este în Ruse, Bulgaria[cite: 7].</p>
-                    <a href="mailto:contact@trk-business.com" class="inline-block bg-gold-500 hover:bg-gold-600 text-slate-950 px-8 py-3.5 rounded-xl font-bold transition">
+                    <a href="mailto:contact@trk-business.com" class="inline-block bg-gold-500 hover:bg-gold-600 text-slate-950 px-8 py-3.5 rounded-xl font-bold transition shadow-lg shadow-gold-500/10">
                         Inițiază un Contact
                     </a>
                 </div>
