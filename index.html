@@ -2,164 +2,191 @@
 <html lang="ro" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TRK Business Invest LTD</title>
-    <!-- Tailwind CSS CDN -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>TRK Business Invest LTD | assetsmanagement.bg</title>
+    <meta name="description" content="TRK Business Invest LTD: investiții strategice de tip Private Equity și Venture Capital în companii cu potențial ridicat din regiune.">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
             theme: {
                 extend: {
-                    colors: {
-                        gold: { 500: '#d4af37', 600: '#aa8c2c' }
-                    }
+                    fontFamily: { sans: ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'] },
+                    colors: { gold: { 500: '#d4af37', 600: '#aa8c2c' } }
                 }
             }
         }
     </script>
+    <style>
+        html { font-family: 'Inter', system-ui, sans-serif; }
+        .lang-btn { opacity: .6; transition: opacity .2s, outline-color .2s; outline: 2px solid transparent; outline-offset: 2px; }
+        .lang-btn:hover { opacity: 1; }
+        .lang-btn[aria-pressed="true"] { opacity: 1; outline-color: #d4af37; }
+        .glow { background: radial-gradient(circle at 50% 0%, rgba(212,175,55,.18), transparent 60%); }
+        .grid-bg { background-image: linear-gradient(rgba(148,163,184,.06) 1px, transparent 1px), linear-gradient(90deg, rgba(148,163,184,.06) 1px, transparent 1px); background-size: 56px 56px; }
+    </style>
 </head>
-<body class="bg-slate-950 text-slate-100 font-sans selection:bg-gold-500 selection:text-slate-950">
+<body class="bg-slate-950 text-slate-100 selection:bg-gold-500 selection:text-slate-950">
 
     <!-- Header -->
-    <header class="fixed top-0 left-0 right-0 z-50 bg-slate-950/80 backdrop-blur-md border-b border-slate-800">
-        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
-            <div class="flex items-center space-x-2">
-                <span class="text-xl font-bold tracking-wider text-white">TRK BUSINESS INVEST</span>
-            </div>
-            <nav class="hidden md:flex space-x-8 text-sm font-medium text-slate-300">
-                <a href="#despre" class="hover:text-gold-500 transition">Despre Noi</a>
-                <a href="#viziune" class="hover:text-gold-500 transition">Viziune & Misiune</a>
-                <a href="#piloni" class="hover:text-gold-500 transition">Piloni Strategici</a>
-                <a href="#criterii" class="hover:text-gold-500 transition">Criterii Investiții</a>
+    <header class="fixed top-0 inset-x-0 z-50 bg-slate-950/80 backdrop-blur-md border-b border-slate-800/80">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between gap-6">
+            <a href="#top" class="flex items-center gap-3"><svg width="44" height="44" viewBox="0 0 44 44" xmlns="http://www.w3.org/2000/svg"><rect width="44" height="44" rx="10" fill="#0f172a" stroke="#d4af37" stroke-width="1.5"/><path d="M8 32 L16 24 L22 28 L36 12" fill="none" stroke="#d4af37" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><circle cx="36" cy="12" r="3" fill="#d4af37"/></svg><span class="flex flex-col leading-tight"><span class="text-lg font-extrabold tracking-[0.18em] text-white">TRK BUSINESS INVEST</span><span class="text-[11px] tracking-wider text-gold-500">assetsmanagement.bg</span></span></a>
+
+            <nav class="hidden lg:flex items-center space-x-8 text-sm font-medium text-slate-300">
+                <a href="#despre" class="hover:text-gold-500 transition" data-i18n="nav_about"></a>
+                <a href="#viziune" class="hover:text-gold-500 transition" data-i18n="nav_vision"></a>
+                <a href="#piloni" class="hover:text-gold-500 transition" data-i18n="nav_pillars"></a>
+                <a href="#criterii" class="hover:text-gold-500 transition" data-i18n="nav_criteria"></a>
             </nav>
-            <a href="#contact" class="bg-gold-500 hover:bg-gold-600 text-slate-950 px-5 py-2.5 rounded-full font-semibold text-sm transition shadow-lg shadow-gold-500/10">
-                Contact Direct
-            </a>
+
+            <div class="flex items-center gap-4">
+                <div class="flex items-center gap-2" role="group" aria-label="Language">
+                    <button class="lang-btn" data-lang="ro" title="Română" aria-label="Română">
+                        <svg width="26" height="18" viewBox="0 0 3 2" class="rounded-[3px] shadow block"><rect width="1" height="2" fill="#002B7F"/><rect x="1" width="1" height="2" fill="#FCD116"/><rect x="2" width="1" height="2" fill="#CE1126"/></svg>
+                    </button>
+                    <button class="lang-btn" data-lang="bg" title="Български" aria-label="Български">
+                        <svg width="26" height="18" viewBox="0 0 3 2" class="rounded-[3px] shadow block"><rect width="3" height="1" fill="#fff"/><rect y="1" width="3" height="0.5" fill="#00966E"/><rect y="1.5" width="3" height="0.5" fill="#D62612"/></svg>
+                    </button>
+                    <button class="lang-btn" data-lang="en" title="English" aria-label="English">
+                        <svg width="26" height="18" viewBox="0 0 60 30" class="rounded-[3px] shadow block"><clipPath id="s"><path d="M0,0 v30 h60 v-30 z"/></clipPath><clipPath id="t"><path d="M30,15 h30 v15 z v15 h-30 z h-30 v-15 z v-15 h30 z"/></clipPath><g clip-path="url(#s)"><path d="M0,0 v30 h60 v-30 z" fill="#012169"/><path d="M0,0 L60,30 M60,0 L0,30" stroke="#fff" stroke-width="6"/><path d="M0,0 L60,30 M60,0 L0,30" clip-path="url(#t)" stroke="#C8102E" stroke-width="4"/><path d="M30,0 v30 M0,15 h60" stroke="#fff" stroke-width="10"/><path d="M30,0 v30 M0,15 h60" stroke="#C8102E" stroke-width="6"/></g></svg>
+                    </button>
+                </div>
+                <a href="#contact" class="hidden sm:inline-block bg-gold-500 hover:bg-gold-600 text-slate-950 px-5 py-2.5 rounded-full font-semibold text-sm transition shadow-lg shadow-gold-500/10" data-i18n="nav_contact"></a>
+            </div>
         </div>
     </header>
 
-    <!-- Hero Section cu Imagine de Fundal Tematică -->
-    <section class="pt-40 pb-28 md:pt-52 md:pb-36 relative overflow-hidden bg-slate-950 border-b border-slate-900">
-        <!-- Imagine de fundal cu efect de întunecare (overlay) -->
-        <div class="absolute inset-0 z-0 opacity-20">
-            <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2000&auto=format&fit=crop" alt="Business district background" class="w-full h-full object-cover">
-        </div>
-        <div class="absolute inset-0 bg-gradient-to-b from-slate-950/60 via-slate-950/90 to-slate-950 z-0"></div>
+    <!-- Hero -->
+    <section id="top" class="relative overflow-hidden pt-40 pb-28 md:pt-52 md:pb-40 border-b border-slate-900">
+        <img src="images/hero.jpg" alt="" class="absolute inset-0 w-full h-full object-cover opacity-40"><div class="absolute inset-0 bg-slate-950/60"></div>
+        <div class="absolute inset-0 glow"></div>
+        <div class="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-slate-950 to-transparent"></div>
 
-        <div class="max-w-7xl mx-auto px-6 text-center relative z-10">
-            <span class="inline-block py-1 px-4 rounded-full bg-gold-500/10 text-gold-500 text-xs font-semibold tracking-widest uppercase mb-6 border border-gold-500/20">
-                Private Equity & Venture Capital • Ruse, Bulgaria[cite: 7]
-            </span>
-            <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight max-w-4xl mx-auto leading-tight mb-8">
-                Creăm valoare pe termen lung prin <span class="text-transparent bg-clip-text bg-gradient-to-r from-gold-500 to-amber-200">investiții strategice</span>
-            </h1>
-            <p class="text-lg md:text-xl text-slate-400 max-w-2xl mx-auto mb-10">
-                Fondată de Tirca Alexandru (fost partener senior la McKinsey)[cite: 7], TRK Business Invest acționează ca un catalizator de creștere pentru companiile cu potențial ridicat din regiune[cite: 7].
-            </p>
+        <div class="relative max-w-7xl mx-auto px-6 text-center">
+            <span class="inline-block py-1 px-4 rounded-full bg-gold-500/10 text-gold-500 text-xs font-semibold tracking-widest uppercase mb-8 border border-gold-500/20" data-i18n="hero_badge"></span>
+            <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight max-w-4xl mx-auto leading-[1.1] mb-8" data-i18n="hero_h1"></h1>
+            <p class="text-lg md:text-xl text-slate-400 max-w-2xl mx-auto mb-10 leading-relaxed" data-i18n="hero_p"></p>
             <div class="flex flex-col sm:flex-row justify-center gap-4">
-                <a href="#criterii" class="bg-gold-500 hover:bg-gold-600 text-slate-950 px-8 py-4 rounded-xl font-bold transition flex items-center justify-center space-x-2">
-                    <span>Criterii de Achiziție</span>
-                </a>
-                <a href="#despre" class="bg-slate-900/80 hover:bg-slate-800 border border-slate-800 text-white px-8 py-4 rounded-xl font-bold transition">
-                    Află Mai Multe
-                </a>
+                <a href="#criterii" class="bg-gold-500 hover:bg-gold-600 text-slate-950 px-8 py-4 rounded-xl font-bold transition" data-i18n="btn_criteria"></a>
+                <a href="#despre" class="bg-slate-900/80 hover:bg-slate-800 border border-slate-800 text-white px-8 py-4 rounded-xl font-bold transition" data-i18n="btn_more"></a>
             </div>
         </div>
     </section>
 
-    <!-- Despre Noi cu Imagine Laterală (Financial Strategy / Meeting) -->
+    <!-- Despre -->
     <section id="despre" class="py-24 bg-slate-950">
         <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             <div>
-                <h2 class="text-3xl md:text-4xl font-bold mb-6 text-white">Despre Noi</h2>
-                <p class="text-slate-300 leading-relaxed mb-6">
-                    <strong>TRK Business Invest LTD</strong> este o societate de investiții și administrare a activelor cu sediul în Bulgaria, specializată în achiziția strategică de acțiuni și participații de capital în companii cu potențial ridicat de performanță[cite: 7].
-                </p>
-                <p class="text-slate-300 leading-relaxed mb-6">
-                    Operând dintr-unul dintre cele mai avantajoase și dinamice medii fiscale din Uniunea Europeană[cite: 7], ne propunem să creăm valoare sustenabilă pe termen lung prin optimizarea structurilor de capital și management strategic riguros[cite: 7].
-                </p>
+                <p class="text-gold-500 text-xs font-bold tracking-[0.2em] uppercase mb-4">TRK Business Invest</p>
+                <h2 class="text-3xl md:text-4xl font-bold mb-6 text-white" data-i18n="about_h"></h2>
+                <p class="text-slate-300 leading-relaxed mb-6" data-i18n="about_p1"></p>
+                <p class="text-slate-300 leading-relaxed" data-i18n="about_p2"></p>
             </div>
             <div class="relative">
-                <div class="absolute -top-4 -right-4 bg-gold-500 text-slate-950 font-bold px-4 py-1.5 rounded-full text-xs shadow z-10">
-                    Expertiză McKinsey[cite: 7]
-                </div>
-                <!-- Imagine reprezentativă pentru mediul de afaceri / investiții -->
-                <div class="rounded-2xl overflow-hidden border border-slate-800 shadow-2xl">
-                    <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=1000&auto=format&fit=crop" alt="Business strategy meeting" class="w-full h-[350px] object-cover hover:scale-105 transition duration-500">
-                </div>
+                <div class="absolute -top-4 -right-4 bg-gold-500 text-slate-950 font-bold px-4 py-1.5 rounded-full text-xs shadow z-10" data-i18n="about_badge"></div>
+                <img src="images/about.jpg" alt="TRK Business Invest" class="rounded-2xl border border-slate-800 shadow-2xl w-full h-[380px] object-cover">
+            </div>
+        </div>
+    </section>
+
+    <!-- Regiune -->
+    <section id="regiune" class="py-24 bg-slate-950">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-14">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4 text-white" data-i18n="region_h"></h2>
+                <p class="text-slate-400 max-w-2xl mx-auto" data-i18n="region_p"></p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <figure class="md:row-span-2 rounded-2xl overflow-hidden border border-slate-800 bg-slate-900">
+                    <img src="images/region-main.jpg" alt="" class="w-full h-full object-cover min-h-[320px]">
+                    <figcaption class="p-4 text-sm text-slate-300" data-i18n="cap1"></figcaption>
+                </figure>
+                <figure class="rounded-2xl overflow-hidden border border-slate-800 bg-slate-900">
+                    <img src="images/romania-bulgaria.jpg" alt="" class="w-full h-56 object-cover">
+                    <figcaption class="p-4 text-sm text-slate-300" data-i18n="cap2"></figcaption>
+                </figure>
+                <figure class="rounded-2xl overflow-hidden border border-slate-800 bg-slate-900">
+                    <img src="images/bulgaria-map.jpg" alt="" class="w-full h-56 object-cover">
+                    <figcaption class="p-4 text-sm text-slate-300" data-i18n="cap3"></figcaption>
+                </figure>
             </div>
         </div>
     </section>
 
     <!-- Viziune & Misiune -->
-    <section id="viziune" class="py-24 bg-slate-900/50 border-y border-slate-900">
-        <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-12">
-            <div class="bg-slate-950 p-8 rounded-2xl border border-slate-800">
-                <h3 class="text-2xl font-bold mb-4 text-white">Viziunea Noastră</h3>
-                <p class="text-slate-300 leading-relaxed">
-                    Să devenim un partener de încredere și un catalizator de creștere pentru companiile din portofoliul nostru, oferindu-le stabilitatea financiară și viziunea necesare pentru a domina piețele pe care activează[cite: 7].
-                </p>
+    <section id="viziune" class="py-24 bg-slate-900/40 border-y border-slate-900">
+        <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div class="bg-slate-950 p-10 rounded-2xl border border-slate-800 hover:border-gold-500/40 transition">
+                <div class="w-10 h-1 bg-gold-500 rounded mb-6"></div>
+                <h3 class="text-2xl font-bold mb-4 text-white" data-i18n="vision_h"></h3>
+                <p class="text-slate-300 leading-relaxed" data-i18n="vision_p"></p>
             </div>
-            <div class="bg-slate-950 p-8 rounded-2xl border border-slate-800">
-                <h3 class="text-2xl font-bold mb-4 text-white">Misiunea Noastră</h3>
-                <p class="text-slate-300 leading-relaxed">
-                    Să identificăm și să integrăm în portofoliul nostru companii solide, maximizând randamentul investițiilor pentru acționari prin decizii strategice bazate pe analiză amănunțită și guvernanță corporativă strictă[cite: 7].
-                </p>
+            <div class="bg-slate-950 p-10 rounded-2xl border border-slate-800 hover:border-gold-500/40 transition">
+                <div class="w-10 h-1 bg-gold-500 rounded mb-6"></div>
+                <h3 class="text-2xl font-bold mb-4 text-white" data-i18n="mission_h"></h3>
+                <p class="text-slate-300 leading-relaxed" data-i18n="mission_p"></p>
             </div>
         </div>
     </section>
 
-    <!-- Pilonii Strategici -->
+    <!-- Piloni -->
     <section id="piloni" class="py-24 bg-slate-950">
-        <div class="max-w-7xl mx-auto px-6 text-center mb-16">
-            <h2 class="text-3xl md:text-4xl font-bold mb-4 text-white">Pilonii Noștri Strategici</h2>
-            <p class="text-slate-400 max-w-2xl mx-auto">Principiile fundamentale care stau la baza fiecărei decizii de investiție[cite: 7].</p>
-        </div>
-        <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <div class="bg-slate-900/40 p-6 rounded-2xl border border-slate-800/80">
-                <h4 class="text-lg font-bold mb-2 text-white">Due Diligence Riguros</h4>
-                <p class="text-slate-400 text-sm leading-relaxed">Analiză minuțioasă a indicatorilor financiari, juridici și operaționali[cite: 7].</p>
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4 text-white" data-i18n="pillars_h"></h2>
+                <p class="text-slate-400 max-w-2xl mx-auto" data-i18n="pillars_p"></p>
             </div>
-            <div class="bg-slate-900/40 p-6 rounded-2xl border border-slate-800/80">
-                <h4 class="text-lg font-bold mb-2 text-white">Management Activ</h4>
-                <p class="text-slate-400 text-sm leading-relaxed">Ne implicăm strategic pentru a debloca potențialul ascuns al companiilor[cite: 7].</p>
-            </div>
-            <div class="bg-slate-900/40 p-6 rounded-2xl border border-slate-800/80">
-                <h4 class="text-lg font-bold mb-2 text-white">Eficiență Regională</h4>
-                <p class="text-slate-400 text-sm leading-relaxed">Poziționare strategică în Bulgaria pentru tranzacții regionale și internaționale[cite: 7].</p>
-            </div>
-            <div class="bg-slate-900/40 p-6 rounded-2xl border border-slate-800/80">
-                <h4 class="text-lg font-bold mb-2 text-white">Sustenabilitate și Etică</h4>
-                <p class="text-slate-400 text-sm leading-relaxed">Principii solide de guvernanță și transparență pe termen lung[cite: 7].</p>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="bg-slate-900/40 p-7 rounded-2xl border border-slate-800/80 hover:-translate-y-1 hover:border-gold-500/40 transition">
+                    <div class="text-gold-500 text-sm font-bold mb-4">01</div>
+                    <h4 class="text-lg font-bold mb-2 text-white" data-i18n="p1t"></h4>
+                    <p class="text-slate-400 text-sm leading-relaxed" data-i18n="p1d"></p>
+                </div>
+                <div class="bg-slate-900/40 p-7 rounded-2xl border border-slate-800/80 hover:-translate-y-1 hover:border-gold-500/40 transition">
+                    <div class="text-gold-500 text-sm font-bold mb-4">02</div>
+                    <h4 class="text-lg font-bold mb-2 text-white" data-i18n="p2t"></h4>
+                    <p class="text-slate-400 text-sm leading-relaxed" data-i18n="p2d"></p>
+                </div>
+                <div class="bg-slate-900/40 p-7 rounded-2xl border border-slate-800/80 hover:-translate-y-1 hover:border-gold-500/40 transition">
+                    <div class="text-gold-500 text-sm font-bold mb-4">03</div>
+                    <h4 class="text-lg font-bold mb-2 text-white" data-i18n="p3t"></h4>
+                    <p class="text-slate-400 text-sm leading-relaxed" data-i18n="p3d"></p>
+                </div>
+                <div class="bg-slate-900/40 p-7 rounded-2xl border border-slate-800/80 hover:-translate-y-1 hover:border-gold-500/40 transition">
+                    <div class="text-gold-500 text-sm font-bold mb-4">04</div>
+                    <h4 class="text-lg font-bold mb-2 text-white" data-i18n="p4t"></h4>
+                    <p class="text-slate-400 text-sm leading-relaxed" data-i18n="p4d"></p>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Criterii de Investiție cu Banner Vizual -->
-    <section id="criterii" class="py-24 bg-slate-900/50 border-t border-slate-900 relative">
-        <div class="max-w-5xl mx-auto px-6 relative z-10">
+    <!-- Criterii & Contact -->
+    <section id="criterii" class="py-24 bg-slate-900/40 border-t border-slate-900">
+        <div class="max-w-5xl mx-auto px-6">
             <div class="bg-slate-950 border border-slate-800 p-8 md:p-12 rounded-3xl shadow-2xl">
-                <h2 class="text-3xl font-bold mb-6 text-white">Criterii de Achiziție & Investiții</h2>
-                <ul class="space-y-4 mb-10 text-slate-300">
-                    <li class="flex items-start space-x-3">
-                        <span class="text-gold-500 font-bold">•</span>
-                        <span><strong>Companii scalabile:</strong> Modele de afaceri cu avantaje competitive clare și fluxuri de numerar predictibile[cite: 7].</span>
+                <h2 class="text-3xl font-bold mb-8 text-white" data-i18n="criteria_h"></h2>
+                <ul class="space-y-5 mb-12 text-slate-300">
+                    <li class="flex items-start gap-4">
+                        <span class="mt-2 w-2 h-2 rounded-full bg-gold-500 shrink-0"></span>
+                        <span data-i18n="c1"></span>
                     </li>
-                    <li class="flex items-start space-x-3">
-                        <span class="text-gold-500 font-bold">•</span>
-                        <span><strong>Echipe puternice:</strong> Lideri de management vizionari, dedicați excelenței operaționale[cite: 7].</span>
+                    <li class="flex items-start gap-4">
+                        <span class="mt-2 w-2 h-2 rounded-full bg-gold-500 shrink-0"></span>
+                        <span data-i18n="c2"></span>
                     </li>
-                    <li class="flex items-start space-x-3">
-                        <span class="text-gold-500 font-bold">•</span>
-                        <span><strong>Sectoare dinamice:</strong> Tehnologie, servicii financiare, logistică și producție sustenabilă[cite: 7].</span>
+                    <li class="flex items-start gap-4">
+                        <span class="mt-2 w-2 h-2 rounded-full bg-gold-500 shrink-0"></span>
+                        <span data-i18n="c3"></span>
                     </li>
                 </ul>
-                <div id="contact" class="border-t border-slate-900 pt-8 text-center">
-                    <h3 class="text-xl font-bold mb-2 text-white">Doriți o colaborare sau o evaluare de oportunitate?</h3>
-                    <p class="text-slate-400 text-sm mb-6">Sediul nostru principal este în Ruse, Bulgaria[cite: 7].</p>
-                    <a href="mailto:contact@trk-business.com" class="inline-block bg-gold-500 hover:bg-gold-600 text-slate-950 px-8 py-3.5 rounded-xl font-bold transition shadow-lg shadow-gold-500/10">
-                        Inițiază un Contact
-                    </a>
+                <div id="contact" class="border-t border-slate-800 pt-10 text-center">
+                    <h3 class="text-xl font-bold mb-2 text-white" data-i18n="contact_h"></h3>
+                    <p class="text-slate-400 text-sm mb-8" data-i18n="contact_p"></p>
+                    <a href="mailto:contact@trk-business.com" class="inline-block bg-gold-500 hover:bg-gold-600 text-slate-950 px-8 py-3.5 rounded-xl font-bold transition shadow-lg shadow-gold-500/10" data-i18n="contact_btn"></a>
                 </div>
             </div>
         </div>
@@ -167,10 +194,125 @@
 
     <!-- Footer -->
     <footer class="py-12 bg-slate-950 border-t border-slate-900 text-center text-sm text-slate-500">
-        <div class="max-w-7xl mx-auto px-6">
-            <p>© 2026 TRK Business Invest LTD. Toate drepturile rezervate. Sediu: Ruse, Bulgaria[cite: 7].</p>
+        <div class="max-w-7xl mx-auto px-6 space-y-2">
+            <p class="font-semibold tracking-[0.18em] text-slate-300">TRK BUSINESS INVEST</p>
+            <p data-i18n="footer"></p>
         </div>
     </footer>
 
+<script>
+    const T = {
+        ro: {
+            region_h: "Activăm în regiunea sudică", region_p: "Ne concentrăm pe companii cu potențial de creștere și acces la piețele din Europa Centrală și de Sud-Est.", cap1: "Europa Centrală și de Sud-Est", cap2: "România și Bulgaria", cap3: "Bulgaria · Ruse",
+            title: 'TRK Business Invest LTD | assetsmanagement.bg',
+            nav_about: 'Despre Noi', nav_vision: 'Viziune & Misiune', nav_pillars: 'Piloni Strategici', nav_criteria: 'Criterii Investiții', nav_contact: 'Contact Direct',
+            hero_badge: 'Private Equity & Venture Capital • Ruse, Bulgaria',
+            hero_h1: 'Creăm valoare pe termen lung prin <span class="text-transparent bg-clip-text bg-gradient-to-r from-gold-500 to-amber-200">investiții strategice</span>',
+            hero_p: 'Fondată de Tirca Alexandru (fost partener senior la McKinsey), TRK Business Invest acționează ca un catalizator de creștere pentru companiile cu potențial ridicat din regiune.',
+            btn_criteria: 'Criterii de Achiziție', btn_more: 'Află Mai Multe',
+            about_h: 'Despre Noi',
+            about_p1: '<strong>TRK Business Invest LTD</strong> este o societate de investiții și administrare a activelor cu sediul în Bulgaria, specializată în achiziția strategică de acțiuni și participații de capital în companii cu potențial ridicat de performanță. Prin rețeaua sa de investiții de tip angel și venture capital, sprijină startup-uri din regiunea sudică.',
+            about_p2: 'Operând dintr-unul dintre cele mai competitive și dinamice medii fiscale din Uniunea Europeană, ne concentrăm pe crearea de valoare pe termen lung prin management strategic, optimizarea structurilor de capital și sinergii inter-organizaționale.',
+            about_badge: 'Expertiză McKinsey', hq_label: 'Sediul principal',
+            vision_h: 'Viziunea Noastră',
+            vision_p: 'Să devenim un partener de referință în regiune pentru companiile care caută nu doar capital, ci și expertiză strategică pentru a-și accelera evoluția și a-și consolida poziția pe piață.',
+            mission_h: 'Misiunea Noastră',
+            mission_p: 'Să maximizăm randamentul investițiilor pentru acționarii noștri prin achiziția responsabilă de acțiuni și părți sociale în entități juridice solide, oferindu-le acestora resursele și viziunea necesare pentru a atinge excelența operațională.',
+            pillars_h: 'Pilonii Noștri Strategici', pillars_p: 'Principiile fundamentale care stau la baza fiecărei decizii de investiție.',
+            p1t: 'Due Diligence Riguros', p1d: 'Fiecare achiziție este precedată de un proces amănunțit de due diligence financiar, juridic și operațional.',
+            p2t: 'Management Activ', p2d: 'Nu suntem investitori pasivi; colaborăm îndeaproape cu managementul companiilor din portofoliu pentru a debloca noi oportunități de piață.',
+            p3t: 'Eficiență Regională', p3d: 'Poziționarea în Bulgaria ne oferă o bază solidă, eficientă fiscal, pentru tranzacții în Europa de Sud-Est și internațional.',
+            p4t: 'Sustenabilitate și Etică', p4d: 'Investim cu respect față de standardele stricte de guvernanță corporativă (ESG) și responsabilitate socială.',
+            criteria_h: 'Criterii de Achiziție & Investiții',
+            c1: '<strong>Companii scalabile:</strong> Modele de afaceri cu avantaje competitive clare și fluxuri de numerar predictibile.',
+            c2: '<strong>Echipe puternice:</strong> Lideri de management vizionari, dedicați excelenței operaționale.',
+            c3: '<strong>Sectoare dinamice:</strong> Tehnologie, servicii financiare, logistică și producție sustenabilă.',
+            contact_h: 'Doriți o colaborare sau o evaluare de oportunitate?',
+            contact_p: 'Sediul nostru principal este în Ruse, Bulgaria.',
+            contact_btn: 'Inițiază un Contact',
+            footer: '© 2026 TRK Business Invest LTD. Toate drepturile rezervate. Sediu: Ruse, Bulgaria.'
+        },
+        bg: {
+            region_h: "Работим в южния регион", region_p: "Фокусираме се върху компании с потенциал за растеж и достъп до пазарите в Централна и Югоизточна Европа.", cap1: "Централна и Югоизточна Европа", cap2: "Румъния и България", cap3: "България · Русе",
+            title: 'TRK Business Invest LTD | assetsmanagement.bg',
+            nav_about: 'За нас', nav_vision: 'Визия и мисия', nav_pillars: 'Стратегически стълбове', nav_criteria: 'Инвестиционни критерии', nav_contact: 'Директен контакт',
+            hero_badge: 'Private Equity & Venture Capital • Русе, България',
+            hero_h1: 'Създаваме дългосрочна стойност чрез <span class="text-transparent bg-clip-text bg-gradient-to-r from-gold-500 to-amber-200">стратегически инвестиции</span>',
+            hero_p: 'Основана от Тирка Александру (бивш старши партньор в McKinsey), TRK Business Invest действа като катализатор на растежа за компании с висок потенциал в региона.',
+            btn_criteria: 'Критерии за придобиване', btn_more: 'Научете повече',
+            about_h: 'За нас',
+            about_p1: '<strong>TRK Business Invest LTD</strong> е инвестиционно дружество и управление на активи със седалище в България, специализирано в стратегическо придобиване на акции и капиталови участия в компании с висок потенциал за резултати. Чрез своята мрежа за ангелски инвестиции и венчър капитал подкрепя стартиращи компании в южния регион.',
+            about_p2: 'Работейки от една от най-конкурентните и динамични данъчни среди в Европейския съюз, ние се стремим да създаваме дългосрочна стойност чрез стратегическо управление, оптимизиране на капиталовите структури и синергии между организациите.',
+            about_badge: 'Експертиза McKinsey', hq_label: 'Основен офис',
+            vision_h: 'Нашата визия',
+            vision_p: 'Да бъдем водещ партньор в региона за компании, които търсят не само капитал, но и стратегическа експертиза, за да ускорят развитието си и да затвърдят позицията си на пазара.',
+            mission_h: 'Нашата мисия',
+            mission_p: 'Да максимизираме възвръщаемостта на инвестициите за нашите акционери чрез отговорно придобиване на акции и дялове в стабилни правни субекти, като им предоставяме ресурсите и визията, необходими за постигане на оперативно съвършенство.',
+            pillars_h: 'Нашите стратегически стълбове', pillars_p: 'Основните принципи, залегнали в основата на всяко инвестиционно решение.',
+            p1t: 'Задълбочена комплексна проверка', p1d: 'Всяко придобиване се предхожда от задълбочен финансов, правен и оперативен due diligence.',
+            p2t: 'Активно управление', p2d: 'Не сме пасивни инвеститори; работим тясно с ръководствата на компаниите от портфейла, за да отключим нови пазарни възможности.',
+            p3t: 'Регионална ефективност', p3d: 'Позиционирането ни в България осигурява стабилна, данъчно ефективна основа за сделки в Югоизточна Европа и на международно ниво.',
+            p4t: 'Устойчивост и етика', p4d: 'Инвестираме при строго спазване на стандартите за корпоративно управление (ESG) и социална отговорност.',
+            criteria_h: 'Критерии за придобиване и инвестиции',
+            c1: '<strong>Мащабируеми компании:</strong> Бизнес модели с ясни конкурентни предимства и предвидими парични потоци.',
+            c2: '<strong>Силни екипи:</strong> Визионерски мениджърски лидери, посветени на оперативното съвършенство.',
+            c3: '<strong>Динамични сектори:</strong> Технологии, финансови услуги, логистика и устойчиво производство.',
+            contact_h: 'Желаете сътрудничество или оценка на възможност?',
+            contact_p: 'Основният ни офис е в Русе, България.',
+            contact_btn: 'Свържете се с нас',
+            footer: '© 2026 TRK Business Invest LTD. Всички права запазени. Седалище: Русе, България.'
+        },
+        en: {
+            region_h: "Active in the Southern Region", region_p: "We focus on companies with growth potential and access to markets across Central and South-Eastern Europe.", cap1: "Central & South-Eastern Europe", cap2: "Romania and Bulgaria", cap3: "Bulgaria · Ruse",
+            title: 'TRK Business Invest LTD | assetsmanagement.bg',
+            nav_about: 'About Us', nav_vision: 'Vision & Mission', nav_pillars: 'Strategic Pillars', nav_criteria: 'Investment Criteria', nav_contact: 'Contact Us',
+            hero_badge: 'Private Equity & Venture Capital • Ruse, Bulgaria',
+            hero_h1: 'Creating long-term value through <span class="text-transparent bg-clip-text bg-gradient-to-r from-gold-500 to-amber-200">strategic investments</span>',
+            hero_p: 'Founded by Alexandru Tirca (former senior partner at McKinsey), TRK Business Invest acts as a growth catalyst for high-potential companies in the region.',
+            btn_criteria: 'Acquisition Criteria', btn_more: 'Learn More',
+            about_h: 'About Us',
+            about_p1: '<strong>TRK Business Invest LTD</strong> is an investment and asset management company headquartered in Bulgaria, specialising in the strategic acquisition of shares and equity stakes in companies with high performance potential. Through its angel investment and venture capital network, it supports start-ups in the southern region.',
+            about_p2: 'Operating from one of the most competitive and dynamic tax environments in the European Union, we focus on creating long-term value through strategic management, optimised capital structures and inter-company synergies.',
+            about_badge: 'McKinsey Expertise', hq_label: 'Headquarters',
+            vision_h: 'Our Vision',
+            vision_p: 'To become a leading regional partner for companies that seek not only capital, but also strategic expertise to accelerate their growth and strengthen their market position.',
+            mission_h: 'Our Mission',
+            mission_p: 'To maximise shareholder returns through responsible acquisition of shares and equity interests in solid companies, providing them with the resources and vision needed to achieve operational excellence.',
+            pillars_h: 'Our Strategic Pillars', pillars_p: 'The core principles behind every investment decision.',
+            p1t: 'Rigorous Due Diligence', p1d: 'Every acquisition is preceded by a thorough financial, legal and operational due diligence process.',
+            p2t: 'Active Management', p2d: 'We are not passive investors; we work closely with portfolio company management to unlock new market opportunities.',
+            p3t: 'Regional Efficiency', p3d: 'Our strategic positioning in Bulgaria gives us a solid, tax-efficient base for transactions across South-Eastern Europe and internationally.',
+            p4t: 'Sustainability & Ethics', p4d: 'We invest in strict compliance with corporate governance (ESG) standards and social responsibility.',
+            criteria_h: 'Acquisition & Investment Criteria',
+            c1: '<strong>Scalable companies:</strong> Business models with clear competitive advantages and predictable cash flows.',
+            c2: '<strong>Strong teams:</strong> Visionary management leaders dedicated to operational excellence.',
+            c3: '<strong>Dynamic sectors:</strong> Technology, financial services, logistics and sustainable manufacturing.',
+            contact_h: 'Interested in collaboration or an opportunity assessment?',
+            contact_p: 'Our main office is in Ruse, Bulgaria.',
+            contact_btn: 'Get in Touch',
+            footer: '© 2026 TRK Business Invest LTD. All rights reserved. Headquarters: Ruse, Bulgaria.'
+        }
+    };
+
+    function setLang(lang) {
+        const d = T[lang];
+        document.documentElement.lang = lang;
+        document.title = d.title;
+        document.querySelectorAll('[data-i18n]').forEach(el => {
+            const v = d[el.dataset.i18n];
+            if (v !== undefined) el.innerHTML = v;
+        });
+        document.querySelectorAll('.lang-btn').forEach(b =>
+            b.setAttribute('aria-pressed', String(b.dataset.lang === lang)));
+        try { localStorage.setItem('site-lang', lang); } catch (e) {}
+    }
+
+    document.querySelectorAll('.lang-btn').forEach(b =>
+        b.addEventListener('click', () => setLang(b.dataset.lang)));
+
+    let start = 'ro';
+    try { start = localStorage.getItem('site-lang') || 'ro'; } catch (e) {}
+    setLang(T[start] ? start : 'ro');
+</script>
 </body>
 </html>
